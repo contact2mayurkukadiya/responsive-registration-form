@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> User Data table </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="view-table.js"></script>
+</head>
+
+<body>
+    <div class="container table-container">
+        <div class=" table-head">
+            <span class="title">User Data</span>
+            <button class="action-button add-btn" onclick="redirectRegistration()">
+                Add User
+            </button>
+        </div>
+        <div class="content tab-data" style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Email Address</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Delete confirmation Modal-->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div id="close" class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
+                        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M320 320 192 192m0 128 128-128" />
+                </svg>
+            </div>
+            <div class="modal-title">
+                <p class="title-text">Delete Confirmation</p>
+            </div>
+            <div class="modal-body">
+                <p class="danger-txt">Are you sure you want to delete user.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="button-container">
+                    <button id="noButton" type="button" class="confirmation-button no-button">No</button>
+                    <button id="yesButton" type="button" class="confirmation-button yes-button">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

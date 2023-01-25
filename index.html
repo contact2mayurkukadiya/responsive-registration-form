@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form id="myForm">
+                <div class="user-details">
+                    <div class="input-box  d-none">
+                        <span class="details">User ID</span>
+                        <input type="text" name="user_id" id="user-id" placeholder="Enter User ID">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" name="first_name" id="user-first-name" size="65"
+                            placeholder="Enter your first name" required>
+                        <span class="danger-txt" id="invalid_first_name"></span>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" name="last_name" id="user-last-name" size="65"
+                            placeholder="Enter your last name" required>
+                        <span class="danger-txt" id="invalid_last_name"></span>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" name="email" id="user-email" size="65" placeholder="Enter your email"
+                            required>
+                        <span class="danger-txt" id="invalid_user-email"></span>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">DOB</span>
+                        <input type="date" name="dob" id="user-dob" placeholder="Enter your DOB" required>
+                        <span class="danger-txt" id="invalid_user-dob"></span>
+                    </div>
+                    <div class="select-box">
+                        <span class="details">Country</span>
+                        <select name="country" id="user-country">
+                            <option value="" disabled selected>Please select Country</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Åland Islands">Åland Islands</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="AndorrA">AndorrA</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Anguilla">Anguilla</option>
+                            <option value="Antarctica">Antarctica</option>
+                        </select>
+                        <span class="danger-txt" id="invalid_user-country"></span>
+                    </div>
+                    <div class="select-box">
+                        <span class="details">State</span>
+                        <select name="state" id="user-state">
+                            <option value="" disabled selected>Please select State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District Of Columbia">District Of Columbia</option>
+                            <option value="Federated States Of Micronesia">Federated States Of Micronesia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                        </select>
+                        <span class="danger-txt" id="invalid_user-state"></span>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="button" value="Register" id="submit_btn" onclick="checkValidation()">
+                </div>
+            </form>
+        </div>
+        <a class="view-table-hyperlink" href="table.html">
+            <span>View User Data
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="48" d="m268 112 144 144-144 144m124-144H100" />
+                </svg>
+            </span>
+        </a>
+    </div>
+    <!-- Age Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
+                        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M320 320 192 192m0 128 128-128" />
+                </svg>
+            </div>
+            <div class="modal-title">
+                <p class="title-text">Validation Error</p>
+            </div>
+            <div class="modal-body">
+                <p class="danger-txt">Age must be greather then 25.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="form.js"></script>
+
+</html>
